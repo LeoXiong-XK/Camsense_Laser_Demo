@@ -1,0 +1,13 @@
+{
+    "rangeView":{
+        "port": 5,
+        "baudRate": 115200,
+        "data_buff": 600,
+        "data_range": 2,
+        "angle_offset": 0,
+        "num_point": 3000,
+        "is_display": 1,
+        "is_record_data": 0,
+        "map_scale": 1.5
+    }
+}
