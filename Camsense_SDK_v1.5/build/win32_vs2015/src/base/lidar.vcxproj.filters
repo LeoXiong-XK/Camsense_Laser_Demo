@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="M:\WorkSpace\PrivateDoc\PraviteCode\Camsense_Laser_Demo\Camsense_SDK_v1.5\src\base\lidar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="M:\WorkSpace\PrivateDoc\PraviteCode\Camsense_Laser_Demo\Camsense_SDK_v1.5\src\base\rOc_serial.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="M:\WorkSpace\PrivateDoc\PraviteCode\Camsense_Laser_Demo\Camsense_SDK_v1.5\src\base\TimeOut.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="M:\WorkSpace\PrivateDoc\PraviteCode\Camsense_Laser_Demo\Camsense_SDK_v1.5\src\base\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{F283AA95-13E0-3E29-BAC2-F9403D824BBE}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

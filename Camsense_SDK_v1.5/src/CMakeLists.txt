@@ -13,5 +13,5 @@ ADD_SUBDIRECTORY(base)
 ADD_EXECUTABLE (sdk_demo sdk_demo.cpp)
 TARGET_LINK_LIBRARIES (sdk_demo lidar)
 
-ADD_EXECUTABLE(rangeView rangeView.cpp)
+ADD_EXECUTABLE(rangeView rangeView.cpp CServer_Wins.cpp CClient_Wins.cpp)
 TARGET_LINK_LIBRARIES(rangeView freeglut lidar)

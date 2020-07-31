@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="M:\WorkSpace\PrivateDoc\PraviteCode\Camsense_Laser_Demo\Camsense_SDK_v1.5\build\win32_vs2015\CMakeFiles\57bf08507bcbc0e99729eefcdaa9e6a4\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{4F4C4D8F-D311-345D-859B-05E3C7A3DFDF}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

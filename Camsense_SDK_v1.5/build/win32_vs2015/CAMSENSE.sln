@@ -1,0 +1,52 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ALL_BUILD", "ALL_BUILD.vcxproj", "{05B61218-ACF3-3556-ABE2-4886BFD76326}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2FE980AD-28B1-3A7E-8F87-7D4044E95822} = {2FE980AD-28B1-3A7E-8F87-7D4044E95822}
+		{64A21787-3068-37DB-A7E6-F76B3E9C99F6} = {64A21787-3068-37DB-A7E6-F76B3E9C99F6}
+		{1274C691-8BAF-345F-B8C6-9ECB17ADA32D} = {1274C691-8BAF-345F-B8C6-9ECB17ADA32D}
+		{B87CFB5D-069E-344C-ABA1-A44A2A68D133} = {B87CFB5D-069E-344C-ABA1-A44A2A68D133}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZERO_CHECK", "ZERO_CHECK.vcxproj", "{2FE980AD-28B1-3A7E-8F87-7D4044E95822}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lidar", "src\base\lidar.vcxproj", "{64A21787-3068-37DB-A7E6-F76B3E9C99F6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2FE980AD-28B1-3A7E-8F87-7D4044E95822} = {2FE980AD-28B1-3A7E-8F87-7D4044E95822}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "rangeView", "src\rangeView.vcxproj", "{1274C691-8BAF-345F-B8C6-9ECB17ADA32D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2FE980AD-28B1-3A7E-8F87-7D4044E95822} = {2FE980AD-28B1-3A7E-8F87-7D4044E95822}
+		{64A21787-3068-37DB-A7E6-F76B3E9C99F6} = {64A21787-3068-37DB-A7E6-F76B3E9C99F6}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sdk_demo", "src\sdk_demo.vcxproj", "{B87CFB5D-069E-344C-ABA1-A44A2A68D133}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2FE980AD-28B1-3A7E-8F87-7D4044E95822} = {2FE980AD-28B1-3A7E-8F87-7D4044E95822}
+		{64A21787-3068-37DB-A7E6-F76B3E9C99F6} = {64A21787-3068-37DB-A7E6-F76B3E9C99F6}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05B61218-ACF3-3556-ABE2-4886BFD76326}.Release|Win32.ActiveCfg = Release|Win32
+		{2FE980AD-28B1-3A7E-8F87-7D4044E95822}.Release|Win32.ActiveCfg = Release|Win32
+		{2FE980AD-28B1-3A7E-8F87-7D4044E95822}.Release|Win32.Build.0 = Release|Win32
+		{64A21787-3068-37DB-A7E6-F76B3E9C99F6}.Release|Win32.ActiveCfg = Release|Win32
+		{64A21787-3068-37DB-A7E6-F76B3E9C99F6}.Release|Win32.Build.0 = Release|Win32
+		{1274C691-8BAF-345F-B8C6-9ECB17ADA32D}.Release|Win32.ActiveCfg = Release|Win32
+		{1274C691-8BAF-345F-B8C6-9ECB17ADA32D}.Release|Win32.Build.0 = Release|Win32
+		{B87CFB5D-069E-344C-ABA1-A44A2A68D133}.Release|Win32.ActiveCfg = Release|Win32
+		{B87CFB5D-069E-344C-ABA1-A44A2A68D133}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {17CF1E57-BB1E-3B53-83F5-704C032A38F8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

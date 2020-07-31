@@ -13,14 +13,13 @@
 #include "rapidjson\filewritestream.h"
 #include "rapidjson\prettyWriter.h"
 
-#include "CClient_Wins.h"
-#include "CServer_Wins.h"
+#include "base\CClient_Wins.h"
+#include "base\CServer_Wins.h"
 
 
 #pragma comment(lib, "ws2_32.lib")
 
 using namespace std;
-bool is_socket_send_finished = false;
 char m_client_buff[2048] = {0};
 
 #define PI 3.141592653589793
