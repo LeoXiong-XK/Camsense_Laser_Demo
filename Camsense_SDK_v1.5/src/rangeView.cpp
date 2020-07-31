@@ -21,7 +21,7 @@
 
 using namespace std;
 bool is_socket_send_finished = false;
-char m_client_buff[2048] = {44,4,54,56,6,767,87,89,45,35,55,56,12,12,132,32,23,23,4,4,23,23,24,24,24,1,32,32,43};
+char m_client_buff[2048] = {0};
 
 #define PI 3.141592653589793
 #define DEGREETORAD (PI/180.)

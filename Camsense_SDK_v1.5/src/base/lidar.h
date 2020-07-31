@@ -30,8 +30,6 @@ public:
     void closeSerial();
     void parse(BYTE *in_buffer, const int in_numData, rangedata *out_dataPack);
 	void Parse_hex_serial_rawdata( char send_buff[], int &fps);
-	void ParseRcv_socket(rangedata *outPack, int &fps);
-	unsigned char* Get_serial_data(int &fps);
 private:
     int data_num_per_pack_;
     int data_num_total_;

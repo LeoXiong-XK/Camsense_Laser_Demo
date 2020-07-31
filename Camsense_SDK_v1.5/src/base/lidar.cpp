@@ -1,7 +1,6 @@
 ﻿#include "lidar.h"
 #include <iostream>
 unsigned char buffer_rangedata[2048]={0};
-unsigned char test_rcv[2048] = {0};
 Dev::Dev()
 {
 }
@@ -15,11 +14,6 @@ void Dev::ParseData_serial(rangedata *dataPack, int &fps)
 
     fps = data_rate_hz_;
 }
-void Dev::ParseRcv_socket(rangedata *outPack, int &fps)
-{
-	parse(buffer_rangedata,data_num_per_pack_,outPack);
-	fps = data_rate_hz_;
-}
 void Dev::Parse_hex_serial_rawdata(char send_buff[],int &fps)
 {
 	//printf("0x%x %x %x %x\n",rcvbuffer_[0],rcvbuffer_[1],rcvbuffer_[2],rcvbuffer_[3]);
@@ -29,15 +23,6 @@ void Dev::Parse_hex_serial_rawdata(char send_buff[],int &fps)
 	fps = data_rate_hz_;
 }
 
-unsigned char* Dev::Get_serial_data(int &fps)
-{
-	test_rcv[0] = 0x22;
-	test_rcv[1] = 0x33;
-	test_rcv[2] = 0x45;
-	test_rcv[3] = 0x56;
-	fps = data_rate_hz_;
-	return test_rcv;
-}
 
 void Dev::parse(unsigned char *in_buffer, const int in_numData,rangedata *out_dataPack)
 {
