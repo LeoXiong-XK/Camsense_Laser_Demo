@@ -11,7 +11,7 @@ Step_2：删去build文件夹；
 
 Step_3：运行bat脚本；
 
-Step_4：按下图所示配置json配置路径：
+Step_4：按下图所示配置json配置路径，要配置为all_config.json的绝对路径：
 
 ![](M:\WorkSpace\PrivateDoc\PraviteCode\Camsense_Laser_Demo\image\json_config.png)
 
