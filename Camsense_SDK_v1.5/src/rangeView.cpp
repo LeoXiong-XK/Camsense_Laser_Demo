@@ -243,7 +243,7 @@ void drawRangeData()
 
     glBegin(GL_POINTS);
     glPointSize(POINT_SIZE);
-	
+/*	
 	 bool bRtn = m_sServer.Accept();
 
 	 if (m_bSendFlag)
@@ -280,7 +280,7 @@ void drawRangeData()
 
 
 	 }
-	 
+	*/ 
 		//---------------------------------------------------------------------------------- 
 		//装满集合后
 		if (dataset.size() == databuff)
@@ -586,7 +586,41 @@ void SerialDataThread()
 		}
     }
 }
+void tcp_ReceiveThread() {
 
+	bool bRtn = m_sServer.Accept();
+	while (true) {
+		//服务器端收到数据
+		memset(m_revData, 0, BUFF_SIZE);
+		printf("Tip:SVR prepare to receive data--->\n");
+		m_sServer.RecMsg(m_revData);
+		//数据判断
+		if (strlen(m_revData) > 0)
+		{
+			//----------------------------------------------------------------------------------
+			//解析收到的数据
+			rangedata data[8];
+			memset(&data, 0, sizeof(data));
+			memcpy(&data, m_revData, sizeof(data));
+			//数据打包
+			for (int i = 0; i < 8; i++) {
+				dataset.push_back(data[i]);
+				if (dataset.size() > databuff) {
+					dataset.erase(dataset.begin());
+				}
+			}
+			printf("dataset:%d\n", dataset.size());
+			//----------------------------------------------------------------------------------
+			m_bSendFlag = false;
+		}
+		else
+		{
+			std::cout << "Error：Null recv data error!\n" << std::endl;
+			//return;
+		}
+		Sleep(10);
+	}
+}
 void GL_RangeViewThread()
 {
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
@@ -650,10 +684,12 @@ int main(int argc, char ** argv)
 	//m_sServer;//注意：服务器端实例化的时候就已经初始化
 
     dataEnable = true;
+	std::thread recThread(tcp_ReceiveThread);//Sercer端接收数据
     std::thread sThread(SerialDataThread);//串口数据转Client端发送
     glutInit(&argc, argv);
     std::thread gThread(GL_RangeViewThread);//服务器端接收数据后显示
     sThread.join();
+	recThread.join();
     return 0;
 }
 

@@ -79,23 +79,23 @@ bool CServer_Wins::Accept()
 			std::cout << "TCP Server is begin to work...." << std::endl;
 			if (sClient == INVALID_SOCKET)
 			{
-				printf("accept error !");
+				printf("accept error !\n");
 				//continue;
 			}
 			else
 			{
 				m_bLinkFlag = true;
+				printf("CServer_Wins accept successful\n");
 			}
 
 			Sleep( 10);
 		}
-
 	return true;
 }
 
 void CServer_Wins::RecMsg(char revData[])
 {
-	if (m_bLinkFlag)
+	//while(true) //(m_bLinkFlag)
 	{
 		//接收数据
 		int ret_num = 0; //接收回来的字节数 
