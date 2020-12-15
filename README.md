@@ -20,3 +20,5 @@ Step_4：按下图所示配置json配置路径，要配置为all_config.json的�
 Step_5：把工程rangeView设置为启动项，如下图：
 
 <img src="M:\WorkSpace\PrivateDoc\PraviteCode\Camsense_Laser_Demo\image\Set_Startup.png" style="zoom:50%;" />
+
+后续步骤待更新。。。。
