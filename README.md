@@ -21,4 +21,6 @@ Step_5：把工程rangeView设置为启动项，如下图：
 
 <img src="M:\WorkSpace\PrivateDoc\PraviteCode\Camsense_Laser_Demo\image\Set_Startup.png" style="zoom:50%;" />
 
+6、由于github不识别.dll文件，所以freeglut.dll在代码仓库并没有上传，使用时需要自行下载并放到对应目录。
+
 后续步骤待更新。。。。
